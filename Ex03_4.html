@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>&ltimg&gt + 이미지 크기 조절(width,height)</h1>
+    <img src="images/tangerines.jpg" alt="대체할 이미지">
+    <img src="" alt="사진이 깨지거나 경로가 잘못 설정된 경우 대체 이미지">
+    <img src="images/salad.jpg" alt="샐러드">
+    <p>기본 크기</p>
+    <img src="images/salad.jpg" alt="샐러드" width="50%" height="50%">
+    <p>width, height 50%</p>
+    <img src="images/salad.jpg" alt="샐러드" width="150">
+    <p>width=150</p> 
+  <hr>
+  <h1>&ltobject&gt와 &ltembed&gt</h1>
+    <object data="product.pdf" width="800" height="600"></object>
+    <embed src="medias/spring.mp3">
+  <hr>
+  <h1>&ltaudio&gt</h1>
+      <p>* 자동 무한 재생 / 컨트롤바 표시</p><audio src="medias/spring.mp3" autoplay loop controls></audio>
+      <p>* 시작시 muted</p><audio src="medias/spring.mp3" controls muted></audio>
+  <hr>
+  <h1>&ltvideo&gt</h1>
+      <p>* 컨트롤바 표시, 시작전 그림</p><video src="medias/flight.mp4" poster="images/salad.jpg" width="960px" height="540px" controls></video>
+      <p>* 자동재생, 음소거, 컨트롤바 표시</p><video src="medias/flight.mp4" controls muted autoplay></video>
+  <hr>
+  <h1>&lta&gt</h1>
+      <a href="./mainhome.html" target="_blank">메인홈으로 새창띄우기</a>
+  <hr>
+</body>
+</html>
