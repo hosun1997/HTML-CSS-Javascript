@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .fd1 {
+    width: 900px;
+    margin: 5px;
+  }
+  .fd2 {
+    width: 900px;
+    margin: 5px;
+  }
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  li {
+    margin: 10px;
+  }
+  li label {
+    float: left;
+    width: 110px;
+  }
+</style>
+<body>
+  <h1>&ltform&gt, &ltfieldset&gt, &ltlegend&gt, &ltlabel&gt</h1>
+  <form action="">
+    <fieldset class="fd1">
+      <legend>autocomplete on</legend>
+        <label for="username1">이름</label>
+        <input type="text" id="username1">
+        <label for="address1">배송주소</label>
+        <input type="text" id="address1">
+        <label for="phone1">연락처</label>
+        <input type="tel" id="phone1">
+        <button type="submit">전송하기</button>
+        <button type="reset">취소하기</button>
+    </fieldset>
+  </form>
+  <br>
+  <form action="" autocomplete="off">  
+    <fieldset class="fd1">
+      <legend>autocomplete off</legend>
+        <label for="username2">이름</label>
+        <input type="text" id="username2">
+        <label for="address2">배송주소</label>
+        <input type="text" id="address2">
+        <label for="phone2">연락처</label>
+        <input type="tel" id="phone2">
+        <button type="submit">전송하기</button>
+        <button type="reset">취소하기</button>
+    </fieldset>
+  </form>
+  <hr>
+  <h1>&ltinput&gt</h1>
+  <form action="">
+    <fieldset class="fd2">
+      <legend>text, password</legend>
+      <ul>
+        <li>
+          <label for="uid">아이디</label>
+          <input type="text" id="uid">
+        </li>
+        <li>
+          <label for="upwd">비밀번호</label>
+          <input type="password" id="upwd">
+        </li>
+        <li>
+          <input type="submit" value="로그인">
+          <input type="reset" value="취소하기">
+        </li>
+        <li>
+          <label for="t1">size5제한</label>
+          <input type="text" id="t1" size="5">
+        </li>
+        <li>
+          <label for="t2">글자수5제한</label>
+          <input type="text" id="t2" maxlength="5">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset class="fd2">
+      <legend>search, url, email, tel</legend>
+      <ul>
+        <li>
+          <label for="umail">이메일</label>
+          <input type="email" id="umail">
+        </li>
+        <li>
+          <label for="furl">웹 주소</label>
+          <input type="url" id="furl">
+        </li>
+        <li>
+          <label for="usearch">검색</label>
+          <input type="search" id="usearch">
+        </li>
+        <li>
+          <label for="uphone">연락처</label>
+          <input type="tel" id="uphone">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>checkbox, radio</legend>
+        <p><b>주문할 상품을 선택해주세요</b></p>
+        <label><input type="checkbox" value="s_3">선물용 3kg</label>
+        <label><input type="checkbox" value="s_5">선물용 5kg</label>
+        <label><input type="checkbox" value="f_3">가정용 3kg</label>
+        <label><input type="checkbox" value="f_5">가정용 5kg</label>
+
+        <p><b>포장 선택</b> (name 속성사용해야됨)</p>
+        <label><input type="radio" name="gift" value="yes">선물 포장</label>
+        <label><input type="radio" name="gift" value="no">포장 안 함</label>
+    </fieldset>
+    <fieldset>
+      <legend>number, range</legend>
+      <ul>
+        <li>
+          <label><input type="checkbox" value="p_3">선물용 3kg</label>
+          <input type="number" min="0" max="5">개 (최대 5개)
+        </li>
+        <li>
+          <label><input type="checkbox" value="p_5">선물용 5kg</label>
+          <input type="number" min="0" max="5" value="1">개 (최대 3개)
+        </li>
+        <li>
+          <label><input type="checkbox" value="f_3">가정용 3kg</label>
+          <input type="range" min="0" max="5">개 (최대 5개)
+        </li>
+        <li>
+          <label><input type="checkbox" value="f_5">가정용 5kg</label>
+          <input type="range" min="0" max="3" value="1">개 (최대 3개)
+        </li>
+      </ul>
+      <p>step 값 10 0에서 100까지 올리기 초기값 10</p>
+      <label><input type="number" min="0" max="100" step="10" value="10"> (100까지 올려보세요)</label>
+    </fieldset>
+    <fieldset>
+      <legend>date, month, week</legend>
+      <input type="date">
+      <input type="month">
+      <input type="week">
+    </fieldset>
+    <fieldset>
+      <legend>time, datetime, datetime-local</legend>
+      <input type="time">
+      <input type="datetime" placeholder="datetime안됨;;">
+      <input type="datetime-local">
+    </fieldset>
+    <form>
+      <fieldset class="fd1">
+        <legend>image, button, file, hidden</legend>
+        <input type="image" src="images/submit.jpg" alt="로그인" width="100px">
+        <p>버튼을 누르면 메인홈 창이 생깁니다.</p>
+        <input type="button" value="버튼" onclick="window.open('mainhome.html')">
+        <input type="file">
+        <input type="hidden" name="userid" value="사이트를 통한 직접 로그인">
+      </fieldset>
+    </form>
+  </form>
+  <hr>
+  <h1>실습1</h1>
+  <form>
+    <fieldset>
+      <legend>사용자 정보</legend>
+      <ul>
+        <li>
+          <label for="userid">아이디</label>
+          <input type="text" id="userid">
+        </li>
+        <li>
+          <label for="useremail">이메일</label>
+          <input type="email" id="useremail">
+        </li>
+        <li>
+          <label for="userpwd">비밀번호</label>
+          <input type="password" id="userpwd">
+        </li>
+        <li>
+          <label for="userrepwd">비밀번호 확인</label>
+          <input type="password" id="userrepwd">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>이벤트와 새로운 소식</legend>
+      <label><input type="radio" name="response" value="y_mail">메일 수신</label>
+      <label><input type="radio" name="response" value="n_mail">메일 수신 안 함</label>
+    </fieldset>
+    <br>
+    <input type="submit" value="가입하기">
+    <input type="reset" value="취소">
+  </form>
+  <h1>실습2</h1>
+  <form>
+    <fieldset>
+      <legend>autofocus, placeholder,required,readonly</legend>
+      <ul>
+        <li>
+          <label for="uidd">아이디</label>
+          <input type="text" id="uidd" placeholder="4자 ~ 10자 사이, 공백없이">
+        </li>
+        <li>
+          <label for="emaill">이메일</label>
+          <input type="email" id="emaill" required>
+        </li>
+        <li>
+          <label for="pwdd">비밀번호</label>
+          <input type="password" id="pwdd" placeholder="문자와 숫자, 특수 기호 포함">
+        </li>
+        <li>
+          <label for="pwddd">비밀번호 확인</label>
+          <input type="password" id="pwddd">
+        </li>
+        <li>
+          <label for="read">읽기전용</label>
+          <input type="text" id="read" value="읽기만 됩니다." readonly>
+        </li>
+      </ul>
+      <input type="submit" value="가입하기">
+      <input type="reset" value="취소">
+    </fieldset>
+  </form>
+  <hr>
+  <h1>&lttextarea&gt</h1>
+  <form>
+    <fieldset>
+      <label for="memo">메모칸</label>
+      <textarea id="memo" cols="30" rows="10" placeholder="메모전용 칸입니다. cols=30, row=10"></textarea>
+    </fieldset>
+  </form>
+  <hr>
+  <h1>&ltselect&gt와 &ltoption&gt</h1>
+  <form>
+    <fieldset>
+      <legend>드롭다운</legend>
+      <p>size=1</p>
+      <label for="prod1">상품 선택</label>
+      <select id="prod1" size="1">
+        <option value="special_3" selected>선물용 3kg</option>
+        <option value="special_5">선물용 5kg</option>
+        <option value="familyl_3">가정용 3kg</option>
+        <option value="familyl_5">가정용 5kg</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <p>size=2</p>
+      <label for="prod2">상품 선택</label>
+      <select id="prod2" size="2">
+        <option value="special_3" selected>선물용 3kg</option>
+        <option value="special_5">선물용 5kg</option>
+        <option value="familyl_3">가정용 3kg</option>
+        <option value="familyl_5">가정용 5kg</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <p>multiple</p>
+      <label for="prod3">상품 선택</label>
+      <select id="prod3" multiple>
+        <option value="special_3" selected>선물용 3kg</option>
+        <option value="special_5">선물용 5kg</option>
+        <option value="familyl_3">가정용 3kg</option>
+        <option value="familyl_5">가정용 5kg</option>
+      </select>
+    </fieldset>
+  </form>
+  <hr>
+  <h1>&ltdatalist&gt와 &ltoption&gt</h1>
+  <form>
+    <fieldset>
+      <legend>데이터목록</legend>
+      <label for="prod4">포장 여부</label>
+      <input type="text" id="prod4" list="pack">
+      <datalist id="pack">
+        <option value="package">선물 포장</option>
+        <option value="no_package">포장 안 함</option>
+      </datalist>
+    </fieldset>
+  </form>
+  <hr>
+  <h1>실습3</h1>
+  <form>
+    <fieldset>
+      <legend>사용자 정보</legend>
+      <ul>
+        <li>
+          <label for="idd">아이디</label>
+          <input type="text" id="idd" placeholder="4자~10자 사이, 공백없이">
+        </li>
+        <li>
+          <label for="eema">이메일</label>
+          <input type="text" id="eema" required>
+        </li>
+        <li>
+          <label for="secn">비밀번호</label>
+          <input type="text" id="secn">
+        </li>
+        <li>
+          <label for="secnu">비밀번호 확인</label>
+          <input type="text" id="secnu">
+        </li>
+        <li>
+          <label for="routes">가입 경로</label>
+          <select id="routes">
+            <option value="blog" selected>블로그</option>
+            <option value="cafe">카페</option>
+            <option value="email">이메일</option>
+            <option value="idonknow">몰라임마</option>
+          </select>
+        </li>
+        <li>
+          <label for="memos">메모</label>
+          <textarea id="memos" cols="30" rows="10" placeholder="남길 말이 있으면 여기에"></textarea>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>이벤트와 새로운 소식</legend>
+      <label><input type="radio" name="yon">메일 수신</label>
+      <label><input type="radio" name="yon">메일 수신 안 함</label>
+    </fieldset>
+    <button type="submit">가입하기</button>
+    <button type="reset">취소</button>
+  </form>
+</body>
+</html>
