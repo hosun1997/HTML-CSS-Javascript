@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>스타일 시트</h1>
+  <table border="1">
+    <tr>
+      <th>종류</th>
+      <th>설명</th>
+    </tr>
+    <tr>
+      <td>브라우저 기본 스타일</td>
+      <td>웹 브라우저에 웹 문서를 표시할 때 브라우저에서 기본으로 사용하는 스타일입니다.</td>
+    </tr>
+    <tr>
+      <td>인라인 스타일</td>
+      <td>style 속성을 사용해 필요한 요소에 스타일을 직접 지정합니다.</td>
+    </tr>
+    <tr>
+      <td>내부 스타일 시트</td>
+      <td>문서 앞부분에 문서에서 사용하는 스타일을 모아서 함께 정의하고 관리합니다.</td>
+    </tr>
+    <tr>
+      <td>외부 스타일 시트</td>
+      <td>문서에서 사용하는 스타일을 모아서 따로 파일로 저장한 후 연결해서 사용합니다.</td>
+    </tr>
+  </table>
+  <hr>
+  <h1>CSS 기본 선택자</h1>
+  <table border="1">
+    <tr>
+      <th>종류</th>
+      <th>설명</th>
+      <th>작성 예시</th>
+    </tr>
+    <tr>
+      <td>전체 선택자</td>
+      <td>문서의 모든 요소에 스타일을 적용합니다.</td>
+      <td> * { margin: 0; } </td>
+    </tr>
+    <tr>
+      <td>타입 선택자</td>
+      <td>특정 태그를 사용한 모든 요소에서 스타일을 적용합니다.</td>
+      <td> p { font-style: italic; } </td>
+    </tr>
+    <tr>
+      <td>클래스 선택자</td>
+      <td>특정 부분만 선택해서 문서 안에 여러 번 적용합니다. 마침표(.)를 붙여서 사용합니다.</td>
+      <td> .bg { background-color: #ddd; } </td>
+    </tr>
+    <tr>
+      <td>id 선택자</td>
+      <td>특정 부분만 선택해서 문서 안에 여러 번 적용합니다. #을 붙여서 사용합니다.</td>
+      <td> #container { width: 500px; }</td>
+    </tr>
+    <tr>
+      <td>그룹 선택자</td>
+      <td>여러 요소에 같은 스타일을 적용할 때 사용합니다.</td>
+      <td> h1, h2 { text-align: center; } </td>
+    </tr>
+  </table>
+  <hr>
+  <h1>스타일 우선순위</h1>
+  <h2>1. 얼마나 중요한가?</h2>
+  <h4>사용자 스타일 → 제작자 스타일 → 브라우저 기본 스타일</h4>
+  <h2>2. 적용 범위는 어디까지인가?</h2>
+  <h4>!important → 인라인 스타일 → id 스타일 → 클래스 스타일 → 타입 스타일</h4>
+  <h2>3. 소스 작성 순서는 어떠한가?</h2>
+  <h4>나중에 작성한 스타일이 먼저 작성한 스타일을 덮어씁니다.</h4>
+</body>
+</html>

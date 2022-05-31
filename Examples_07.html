@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #s1 {font-size: xx-small;}
+    #s2 {font-size: x-small;}
+    #s3 {font-size: small;}
+    #s4 {font-size: medium;}
+    #s5 {font-size: large;}
+    #s6 {font-size: x-large;}
+    #s7 {font-size: xx-large;}
+    #s8 {font-style: italic;}
+    #s9 {font-style: oblique;}
+    #w1 {font-weight: bold;}
+    #w2 {font-weight: bolder;}
+    #w3 {font-weight: lighter;}
+    #w4 {font-weight: 100;}
+    #w5 {font-weight: 200;}
+    #w6 {font-weight: 300;}
+    #w7 {font-weight: 400;}
+    #w8 {font-weight: 500;}
+    #w9 {font-weight: 600;}
+    #w10 {font-weight: 700;}
+    #w11 {font-weight: 800;}
+    #w12 {font-weight: 900;}
+    @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+    #fontf {
+      font-size: 60px;
+      font-weight: bold;
+      font-family: 'Nanum Myeongjo', serif;
+    }
+    #f1 {
+      font-size: 60px;
+      color: rgb(255, 255, 255);
+    }
+    #f2 {
+      font-size: 60px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    #t1 {
+      text-align: start;
+    }
+    #t2 {
+      text-align: end;
+    }
+    #t3 {
+      text-align: left;
+    }
+    #t4 {
+      text-align: right;
+    }
+    #t5 {
+      text-align: center;
+    }
+    #t6 {
+      text-align: justify;
+    }
+    #lh1 {
+      color: white;
+      font-size: 60px;
+      text-align: center;
+      line-height: 100px;
+    }
+    #sh1 {
+      font-size: 60px;
+      font-weight: 900;
+      color: red;
+      text-shadow: 1px 1px black;
+    }
+    #sh2 {
+      font-size: 60px;
+      font-weight: 900;
+      text-shadow: 5px 5px 3px #ffa500;
+    }
+    #sh3 {
+      font-size: 60px;
+      font-weight: 900;
+      color: white;
+      text-shadow: 7px -7px 20px #000;
+    }
+    #us1 {
+      list-style-type: disc;
+    }
+    #us2 {
+      list-style-type: circle;
+    }
+    #us3 {
+      list-style-type: square;
+    }
+    #us4 {
+      list-style-type: decimal;
+    }
+    #us5 {
+      list-style-type: decimal-leading-zero;
+    }
+    #us6 {
+      list-style-type: lower-roman;
+    }
+    #us7 {
+      list-style-type: upper-roman;
+    }
+    #us8 {
+      list-style-type: lower-alpha;
+    }
+    #us9 {
+      list-style-type: upper-latin;
+    }
+    #us10 {
+      list-style-type: none;
+    }
+    #us11 {
+      list-style-image: url(images/dot.png);
+    }
+    #us12 {
+      list-style-position: inside;
+    }
+    table {
+      caption-side: bottom;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px dotted black;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>font-size</h1>
+  <p id="s1">안녕하세요</p>
+  <p id="s2">안녕하세요</p>
+  <p id="s3">안녕하세요</p>
+  <p id="s4">안녕하세요</p>
+  <p id="s5">안녕하세요</p>
+  <p id="s6">안녕하세요</p>
+  <hr>
+  <h1>font-style</h1>
+  <p id="s8">italic반갑습니다.</p>
+  <p id="s9">oblique반갑습니다.</p>
+  <hr>
+  <h1>font-weight</h1>
+  <p id="w1">고맙습니다. bord</p>
+  <p id="w2">고맙습니다. border</p>
+  <p id="w3">고맙습니다. lighter</p>
+  <p>고맙습니다. normal</p>
+  <p id="w4">고맙습니다. 100</p>
+  <p id="w5">고맙습니다. 200</p>
+  <p id="w6">고맙습니다. 300</p>
+  <p id="w7">고맙습니다. 400</p>
+  <p id="w8">고맙습니다. 500</p>
+  <p id="w9">고맙습니다. 600</p>
+  <p id="w10">고맙습니다. 700</p>
+  <p id="w11">고맙습니다. 800</p>
+  <p id="w12">고맙습니다. 900</p>
+  <hr>
+  <h1>웹폰트 사용하기</h1>
+  <p id="fontf">HTML + CSS + JavaScript</p>
+  <hr>
+  <h1>글자색 변경</h1>
+  <p style="color: red;">붉은색 글씨 color!</p>
+  <div style="background-image: url(images/bg_07.jpg); background-size: cover; background-repeat: no-repeat; width:800px; height: 500px; text-align: center;">
+     <h1 id="f1">HTML</h1>
+     <h1 id="f2">CSS</h1>
+  </div>
+  <hr>
+  <h1>텍스트 정렬</h1>
+  <div style="width: 300px; border: 1px solid black;">
+    <p>start</p>
+    <p id="t1">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</p>
+  </div>
+  <div style="width: 300px; border: 1px solid black;">
+    <p>end</p>
+    <p id="t2">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</p>
+  </div>
+  <div style="width: 300px; border: 1px solid black;">
+    <p>left</p>
+    <p id="t3">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</p>
+  </div>
+  <div style="width: 300px; border: 1px solid black;">
+    <p>right</p>
+    <p id="t4">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</p>
+  </div>
+  <div style="width: 300px; border: 1px solid black;">
+    <p>center</p>
+    <p id="t5">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</p>
+  </div>
+  <div style="width: 300px; border: 1px solid black;">
+    <p>justify</p>
+    <p id="t6">동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세.</p>
+  </div>
+  <hr>
+  <h1>줄간격 조절하기</h1>
+  <div style="background-color: black; height:100px">
+    <p style="color:white; font-size:60px; text-align:center; line-height: 0.7;">HTML</p>
+  </div>
+  <div style="background-color: black; height:100px">
+    <p id="lh1">HTML</p>
+  </div>
+  <hr>
+  <h1>텍스트의 줄을 표시하거나 없애기</h1>
+  <p style="text-decoration: none;">none</p>
+  <p style="text-decoration: underline;">underline</p>
+  <p style="text-decoration: overline;">overline</p>
+  <p style="text-decoration: line-through;">line through</p>
+  <hr>
+  <h1>텍스트에 그림자 효과주기</h1>
+  <p id="sh1">HTML</p>
+  <p id="sh2">CSS</p>
+  <p id="sh3">JAVASCRIPT</p>
+  <hr>
+  <h1>텍스트 대소문자변경</h1>
+  <p style="text-transform: capitalize;">html</p>
+  <p style="text-transform: uppercase;">css</p>
+  <p style="text-transform: lowercase;">JAVASCRIPT</p>
+  <hr>
+  <h1>자간 조절</h1>
+  <p>CSS</p>
+  <p style="letter-spacing: 0.2em;">CSS</p>
+  <p style="letter-spacing: 0.5em;">CSS</p>
+  <hr>
+  <h1>목록 스타일</h1>
+  <ul id="us1">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us2">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us3">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us4">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us5">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us6">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us7">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us8">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us9">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <ul id="us10">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <hr>
+  <h1>불릿 대신 이미지</h1>
+  <ul id="us11">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <hr>
+  <h1>목록 들여쓰기</h1>
+  <ul>
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <p>들여쓰기</p>
+  <ul id="us12">
+    <li>너의 향기가</li>
+    <li>바람에 실려오네</li>
+    <li>스물다섯 스물하나</li>
+  </ul>
+  <hr>
+  <h1>표 스타일</h1>
+  <table>
+    <caption>선물용과 가정요 상품 구성</caption>
+    <tr>
+      <th>용도</th>
+      <th>중량</th>
+      <th>개수</th>
+      <th>가격</th>
+    </tr>
+    <tr>
+      <td rowspan="2">선물용</td>
+      <td>3kg</td>
+      <td>11~16과</td>
+      <td>35,000원</td>
+    </tr>
+    <tr>
+      <td>5kg</td>
+      <td>18~26과</td>
+      <td>52,000원</td>
+    </tr>
+    <tr>
+      <td rowspan="2">가정용</td>
+      <td>3kg</td>
+      <td>11~16과</td>
+      <td>30,000원</td>
+    </tr>
+    <tr>
+      <td>5kg</td>
+      <td>18~26과</td>
+      <td>47,000원</td>
+    </tr>
+  </table>
+</body>
+</html>
