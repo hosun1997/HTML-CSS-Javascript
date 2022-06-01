@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .dsize {
+      width: 1000px;
+      height: 500px;
+      border: 1px solid black;
+      margin: 5px;
+      float: left;
+      font-size: 50px;
+      color: yellowgreen;
+      font-weight: 900;
+    }
+    #d1 {
+      background-color: yellow;
+      width: 300px;
+      height: 100px;
+    }
+    .d2 {
+      border: 5px dashed black;
+      background-color: #ffd9a0;
+      width: 350px;
+      padding: 20px;
+      margin: 5px;
+      float: left;
+    }
+    #cpbo {
+      background-clip: border-box;
+    }
+    #cppd {
+      background-clip: padding-box;
+    }
+    #cpct {
+      background-clip: content-box;
+    }
+    .clears {
+      clear: left;
+    }
+    #img1 {
+      background-image: url(images/bg1_09.jpg);
+    }
+    #img2 {
+      background-image: url(images/bear.jpg);
+      background-repeat: repeat;
+    }
+    #img3 {
+      background-image: url(images/bear.jpg);
+      background-repeat: repeat-x;
+    }
+    #img4 {
+      background-image: url(images/bear.jpg);
+      background-repeat: repeat-y;
+    }
+    #img5 {
+      background-image: url(images/bear.jpg);
+      background-repeat: no-repeat;
+    }
+    #imgp {
+      background-image: url(images/bear.jpg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+    #bg31 {
+      background-image: url(images/bg2_09.png);
+      background-repeat: no-repeat;
+      background-position: right top;
+      width: 1200px;
+      height: 1200px;
+      border: 1px solid black;
+    }
+    .bg331 {
+      width:400px;
+      height:250px;
+      padding: 20px;     
+      margin-bottom:20px;
+    }
+    #bg3331 {
+      background-image:url('images/bg3_09.png');
+      background-repeat:no-repeat;
+      background-position:right top;
+      border: 10px solid #eee;
+      background-origin:padding-box;
+      overflow:auto;
+    }
+    #bg3332 {
+      background-image:url('images/bg3_09.png');
+      background-repeat:no-repeat;
+      background-position:right top;
+      border: 10px solid #eee;
+      background-origin: border-box;
+      overflow:auto;
+    }
+    #bg3333 {
+      background-image:url('images/bg3_09.png');
+      background-repeat:no-repeat;
+      background-position:right top;
+      border: 10px solid #eee;
+      background-origin: content-box;
+      overflow:auto;
+    }
+    #dm1 {
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      background-image: url(images/bg4_09.jpg);
+      border: 1px solid black;
+      background-size: auto;
+      background-repeat: no-repeat;
+      float: left;
+    }
+    #dm2 {
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      background-image: url(images/bg4_09.jpg);
+      border: 1px solid black;
+      background-repeat: no-repeat;
+      background-size: cover;
+      float: left;
+    }
+    #dm3 {
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      background-image: url(images/bg4_09.jpg);
+      border: 1px solid black;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      float: left;
+    }
+    #dm4 {
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      background-image: url(images/bg4_09.jpg);
+      border: 1px solid black;
+      background-repeat: no-repeat;
+      background-size: 200px;
+      float: left;
+    }
+    #dm5 {
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      background-image: url(images/bg4_09.jpg);
+      border: 1px solid black;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      float: left;
+    }
+    #dm6 {
+      width: 300px;
+      height: 300px;
+      margin: 20px;
+      background-image: url(images/bg4_09.jpg);
+      border: 1px solid black;
+      background-size: contain;
+      background-repeat: no-repeat;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>배경색과 배경 범위 지정하기</h1>
+  <h2>background-color</h2>
+  <p>background-color값은 상속되지 않는다!</p>
+  <div id="d1">
+    <p>배경색은 노란색입니다.</p>
+  </div>
+  <h2>background-clip | 테두리까지 | 패딩까지 | 콘텐츠만</h2>
+  <div class="d2" id="cpbo">
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로 <br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+  </div>
+  <div class="d2" id="cppd">
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로 <br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+  </div>
+  <div class="d2" id="cpct">
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+    <p>레드향은 한라봉과 귤을 교배한 것으로 <br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+  </div>
+  <div class="clears"></div>
+  <hr>
+  <h1>배경이미지 지정하기</h1>
+  <div class="dsize" id="img1"></div>
+  <div class="clears"></div>
+  <h1>배경이미지 반복하기</h1>
+  <div class="dsize" id="img2">repeat</div>
+  <div class="dsize" id="img3">repeat-x</div>
+  <div class="dsize" id="img4">repeat-y</div>
+  <div class="dsize" id="img5">no-repeat</div>
+  <div class="clears"></div>
+  <h1>배경이미지 위치 조절하기</h1>
+  <div class="dsize" id="imgp"></div>
+  <div class="clears"></div>
+  <h1>배경이미지 고정하기</h1>
+  <div id="bg31">
+    <div class="bg331">
+      <div id="bg3331">
+        <h1>바빠 시리즈</h1>
+        <b>-바쁜 학생을 위한 빠른 학습법</b>
+        <p>쉬운 내용은 압축하여 빠르게, 어려운 내용은 더 많이 공부하는 효율적인 학습 설계가 되어 있는 바빠 연산법과 손이 기억하는 훈련 프로그램인 바빠 영어 시리즈가 있습니다.</p>
+      </div>
+    </div>
+    <div class="bg331">
+      <div id="bg3332">
+        <h1>바빠 시리즈</h1>
+        <b>-바쁜 학생을 위한 빠른 학습법</b>
+        <p>쉬운 내용은 압축하여 빠르게, 어려운 내용은 더 많이 공부하는 효율적인 학습 설계가 되어 있는 바빠 연산법과 손이 기억하는 훈련 프로그램인 바빠 영어 시리즈가 있습니다.</p>
+      </div>
+    </div>
+    <div class="bg331">
+      <div id="bg3333">
+        <h1>바빠 시리즈</h1>
+        <b>-바쁜 학생을 위한 빠른 학습법</b>
+        <p>쉬운 내용은 압축하여 빠르게, 어려운 내용은 더 많이 공부하는 효율적인 학습 설계가 되어 있는 바빠 연산법과 손이 기억하는 훈련 프로그램인 바빠 영어 시리즈가 있습니다.</p>
+      </div>
+    </div>
+  </div>
+  <h1>배경이미지 크기 조정</h1>
+  <div id="dm1"></div>
+  <div id="dm2"></div>
+  <div id="dm3"></div>
+  <div id="dm4"></div>
+  <div id="dm5"></div>
+  <div id="dm6"></div>
+  <div class="clears"></div>
+  <hr>
+</body>
+</html>
