@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #m1 {
+    text-align: center;
+    border: 1px solid black;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    line-height: 0.7em;
+  }
+  #b1 {
+    text-align: center;
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    line-height: 0.7em;
+  }
+  #p1 {
+    text-align: center;
+    border: 1px solid black;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    line-height: 0.7em;
+  }
+  #c1 {
+    text-align: center;
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+  }
+  #box1 {
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+    box-shadow: 2px -2px 5px 0px;
+  }
+  #box2 {
+    border: 1px solid black;
+    width: 400px;
+    height: 100px;
+    box-shadow: 5px 5px 15px 5px blue;
+  }
+  #bs1 {
+    border-style: none;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs2 {
+    border-style: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs3 {
+    border-style: solid;
+    border-left-width: thick;
+    border-top-width: thin;
+    border-right-width: medium;
+    border-bottom-width: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs4 {
+    border-style: dotted;
+    border-left-color: red;
+    border-top-color: blue;
+    border-right-color: green;
+    border-bottom-color: aqua;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs5 {
+    border-style: dashed;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs6 {
+    border-style: double;
+    border-width: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs7 {
+    border-style: groove;
+    border-width: 10px;
+    border-color: skyblue;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs8 {
+    border-style: inset;
+    border-width: 10px;
+    border-color: yellowgreen;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs9 {
+    border-style: outset;
+    border-width: 10px;
+    border-color: aqua;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #bs10 {
+    border-style: ridge;
+    border-width: 10px;
+    border-color: orange;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    float: left;
+  }
+  #cat {
+    border-radius: 25px;
+  }
+  #circle {
+    border-radius: 50%;
+  }
+  #tl {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    margin: 5px;
+    float: left;
+  }
+  #tr {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-top-right-radius: 20px;
+    float: left;
+  }
+  #bl {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-bottom-left-radius: 20px;
+    float: left;
+  }
+  #br {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border-bottom-right-radius: 20px;
+    float: left;
+  }
+  .clears {
+    clear: left;
+  }
+  #margin1 {
+    width: 1200px;
+    height: 800px;
+    border: 1px solid black;
+    background-color: black;
+  }
+  #margin2 {
+    width: 600px;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  #mbox1 {
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: red;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  #mbox2 {
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: blue;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  #mbox3 {
+    width: 200px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: green;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  #mbox4 {
+    width: 200px;
+    height: 100px;
+    margin: 60px auto;
+    background-color: red;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  #mbox5 {
+    width: 200px;
+    height: 100px;
+    margin: 60px auto;
+    background-color: blue;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  #mbox6 {
+    width: 200px;
+    height: 100px;
+    margin: 60px auto;
+    background-color: green;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  nav ul {list-style-type: none;}
+  nav ul li {
+    display: inline-block;
+    padding: 20px;
+    margin: 0 20px;
+    border: 3px solid black;
+  }
+  #flo {
+    float: left;
+  }
+  #fbox1 {
+    background-color: yellow;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  #fbox2 {
+    background-color: yellowgreen;
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    float: left;
+  }
+  #fbox3 {
+    background-color: green;
+    height: 50px;
+  }
+  #fbox4 {
+    background-color: purple;
+    height: 50px;
+    clear: left;
+  }
+  #container {
+    width: 1200px;
+    height: 820px;
+    border: 1px solid black;
+    margin: 20px auto;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  #header {
+    width: 100%;
+    height: 120px;
+    background-color: #888;
+  }
+  #sidebarleft {
+    width: 250px;
+    height: 600px;
+    background-color: skyblue;
+    float: left;
+  }
+  #contents {
+    width: 800px;
+    height: 600px;
+    background-color: #eee;
+    float: left;
+  }
+  #sidebarright {
+    width: 150px;
+    height: 600px;
+    background-color: skyblue;
+    float: left;
+  }
+  #footer {
+    width: 100%;
+    height: 100px;
+    background-color: #888;
+    clear: left;
+  }
+  #pos1 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+  }
+  #pos2 {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+  }
+  #pos3 {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+  }
+  #fixed {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    right: 30px;
+    top: 30px;
+    position: fixed;
+  }
+  #bgs {
+    width: 1200px;
+    height: 820px;
+    border: 1px solid black;
+    background-image: url(images/bg_08.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  #h1css {
+    color: #fff;
+    font-size: 120px;
+    text-shadow: 2px 3px 0 #000;
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+  }
+</style>
+<body>
+<h1>블록 레벨 요소와 인라인 레벨 요소</h1> 
+<div style="border:1px solid black;">
+  <h2  style="border:1px solid black;">시간이란</h2>
+  <div  style="border:1px solid black;">내일 죽을 것처럼 <p  style="border:1px solid black; color: red; font-weight: bolder;">오늘</p>을 살고</div>
+  <p  style="border:1px solid black;">영원히 살 것처럼 <br> 내일을 꿈꾸어라</p>
+</div>
+<div style="border:1px solid black;">
+  <h2  style="border:1px solid black;">시간이란</h2>
+  <div  style="border:1px solid black;">내일 죽을 것처럼 <span  style="border:1px solid black; color:red; font-weight: border;">오늘</span>을 살고</div>
+  <p  style="border:1px solid black;">영원히 살 것처럼 <br>내일을 꿈꾸어라</p>
+</div>
+<h1>박스 모델 기본 구성</h1>
+<div id="m1">
+  <h2>마진</h2>
+  <div id="b1">
+    <h2>테두리</h2>
+    <div id="p1">
+      <h2>패딩</h2>
+      <div id="c1">
+        <h2>콘텐츠영역</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<h1>박스모델에 그림자효과</h1>
+<p>box-shadow: &lt수평거리&gt | &lt수직거리&gt | &lt흐림정도&gt | &lt번짐정도&gt | &lt색상&gt | inset</p>
+<div id="box1"></div>
+<br>
+<div id="box2"></div>
+<hr>
+<h1>테두리 스타일,두께, 색상 지정하기</h1>
+<div id="bs1"></div>
+<div id="bs2"></div>
+<div id="bs3"></div>
+<div id="bs4"></div>
+<div id="bs5"></div>
+<div id="bs6"></div>
+<div id="bs7"></div>
+<div id="bs8"></div>
+<div id="bs9"></div>
+<div id="bs10"></div>
+<div class="clears"></div>
+<h1>박스 모델 둥근 테두리 만들기</h1>
+<img src="images/cat.jpg" alt="고양이">
+<img src="images/cat.jpg" alt="고양이" id="cat">
+<br>
+<img src="images/photo.jpg" alt="둥글게둥글게">
+<img src="images/photo.jpg" alt="둥글게둥글게" id="circle">
+<br>
+<div id="tl"></div>
+<div id="tr"></div>
+<div id="bl"></div>
+<div id="br"></div>
+<div class="clears"></div>
+<hr>
+<h1>여백을 조정하는 속성</h1>
+<div id="margin1">
+  <div id="margin2">
+    <h2>마진 이용하기</h2>
+    <p>margin 값을 설정하여 문서를 가운데로 이동시킬 겁니다.</p>
+    <p>margin: 20px auto로 설정하였습니다.</p>
+    <hr>
+    <p>웹 문서 전체를 가운데 정렬한 것입니다.</p>
+    <p>다음은 마진 중첩에 대해서 알아볼 예정입니다.</p>
+  </div>
+</div>
+<h1>마진 중첩</h1>
+<div style="border: 1px solid black; width:275px; height:500px; float: left; margin: 3px;">
+  <div id="mbox1"><p>margin: 30px</p></div>
+  <div id="mbox2"><p>margin: 30px</p></div>
+  <div id="mbox3"><p>margin: 30px</p></div>
+</div>
+<div style="border: 1px solid black; width:275px; height:500px; float: left; margin: 3px;">
+  <div id="mbox4"><p>margin: 60px</p></div>
+  <div id="mbox5"><p>margin: 60px</p></div>
+  <div id="mbox6"><p>margin: 60px</p></div>
+</div>
+<div class="clears"></div>
+<hr>
+<h1>웹 문서의 레이아웃 만들기</h1>
+<h2>display속성</h2>
+<nav>
+  <ul>
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+  </ul>
+</nav>
+<h2>float 속성</h2>
+<img src="images/tree.png" alt="나무" id="flo">
+<p>Ex et adipisicing voluptate aliqua cupidatat nulla. Laboris est sint sit aliqua enim. Aute Lorem eu sint aute sunt proident. Do culpa consectetur elit duis laboris reprehenderit incididunt nulla. Irure exercitation tempor aliqua laboris cupidatat anim in non officia aliquip excepteur fugiat labore.</p>
+<p>Lorem ipsum reprehenderit adipisicing exercitation enim velit veniam incididunt sit consectetur elit exercitation. Commodo veniam sit quis nisi ea. Ipsum do aliqua nostrud laboris elit duis adipisicing id Lorem qui. Labore dolor ipsum enim incididunt. Velit qui cillum sunt labore incididunt duis aute Lorem nulla et. Sint commodo aute amet laboris ullamco exercitation Lorem dolore veniam ut reprehenderit incididunt. Laborum nulla eiusmod cillum irure anim aute.</p>
+<p>Excepteur voluptate ad irure ipsum duis. Deserunt cupidatat commodo proident eu mollit cillum commodo quis quis et ad. Incididunt adipisicing enim laboris voluptate.</p>
+<div class="clears"></div>
+</body>
+<div id="fbox1">박스1</div>
+<div id="fbox2">박스2</div>
+<div id="fbox3">박스3</div>
+<div id="fbox4">박스4</div>
+<br>
+<div id="container">
+  <div id="header">사이트제목</div>
+  <div id="sidebarleft">사이드바</div>
+  <div id="contents">본문</div>
+  <div id="sidebarright">사이드바</div>
+  <div id="footer">푸터</div>
+</div>
+<hr>
+<h1>웹 요소 위치 정하기</h1>
+<div style="width: 600px; height: 500px; border: 1px solid black; position: relative;">
+  <p id="pos1">top 50 / left 50</p>
+  <p id="pos2">top 50 / right 50</p>
+  <p id="pos3">bottom 100 / left 100</p>
+  <p id="fixed">고정된 위치입니다.</p>
+</div>
+<br>
+<div id="bgs">
+  <h1 id="h1css">CSS</h1>
+</div>
+</html>
