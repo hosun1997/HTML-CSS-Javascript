@@ -5,8 +5,98 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .container {
+				width:800px;
+				height:200px;
+				margin:20px auto;
+        border: 1px solid black;
+			}
+      .origin {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				float: left;
+				margin: 40px;
+			}
+			.origin > div {				
+				width:100px;
+				height:100px;
+				background-color:orange;
+        text-align: center;
+        line-height: 100px;
+        font-size: 50px;
+			}
+      #movex:hover {
+        transform: translateX(50px);
+      }
+      #movey:hover {
+        transform: translateY(50px);
+      }
+      #movexy:hover {
+        transform: translate(50px,50px);
+      }
+      #scalex:hover {
+        transform: scaleX(0.7);
+      }
+      #scaley:hover {
+        transform: scaleY(1.5);
+      }
+      #scalexy:hover {
+            transform: scale(2,3);
+      }
+      #rotatex:hover {
+        transform: rotateX(60deg);
+      }
+      #rotatey:hover {
+        transform: rotateY(60deg);
+      }
+      #per {
+        perspective: 300px;
+      }
+  </style>
 </head>
 <body>
-  
+  <h1>transform</h1>
+  <p>도형 위에 마우스를 올려보세요.</p>
+  <h2>translate()함수</h2>
+  <div class="container">
+    <div class="origin">
+      <div id="movex"></div>
+    </div>
+    <div class="origin">
+      <div id="movey"></div>
+    </div>
+    <div class="origin">
+      <div id="movexy"></div>
+    </div>
+  </div>
+  <h2>scale()함수</h2>
+  <div class="container">
+    <div class="origin">
+      <div id="scalex"></div>
+    </div>
+    <div class="origin">
+      <div id="scaley"></div>
+    </div>
+    <div class="origin">
+      <div id="scalexy"></div>
+    </div>
+  </div>
+  <h1>rotate()함수 / x값 / 원근감부여 / y값 / 원근감 부여</h1>
+  <div class="container">
+    <div class="origin">
+      <div id="rotatex">가</div>
+    </div>
+    <div class="origin" id="per">
+      <div id="rotatex">가</div>
+    </div>
+    <div class="origin">
+      <div id="rotatey">가</div>
+    </div>
+    <div class="origin" id="per">
+      <div id="rotatey">가</div>
+    </div>
+  </div>
 </body>
 </html>
