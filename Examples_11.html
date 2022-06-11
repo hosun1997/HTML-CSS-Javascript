@@ -54,6 +54,195 @@
       #per {
         perspective: 300px;
       }
+      #skewX:hover {
+        transform: skewX(30deg);
+      }
+      #skewY:hover {
+        transform: skewY(15deg);
+      }
+      #skewxy:hover {
+        transform: skew(-25deg, -15deg);
+      }
+      #h3div {
+        display: inline-block;
+        background-color: black;
+        color: white;
+        transform: skewX(15deg);
+      }
+      #transpodu {
+        background-color: blue;
+        color: white;
+        display: inline-block;
+        transition-property: width, height;
+        transition-duration: 2s, 1s;
+        margin: 20px;
+      }
+      #transpodu:hover {
+        width: 200px;
+        height: 120px;
+      }
+    #box div{
+      float:left;
+      width:100px;
+      height:50px;
+      margin:5px 10px;
+      padding:5px;
+      color:white;
+      background-color:#006aff;
+      border-radius:5px;
+      text-align:center;
+      font-weight:bold;	
+    }
+   #box:hover div{
+     height: 400px;
+   }
+   #box .ease {
+     transition-duration: 3s;
+     transition-timing-function: ease;
+   }
+   #box .linear {
+    transition-duration: 3s;
+    transition-timing-function: linear;
+   }
+   #box .ease-in {
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+   }
+   #box .ease-out {
+    transition-duration: 3s;
+    transition-timing-function: ease-out;
+   }
+   #box .ease-in-out {
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+   }
+   .clears{
+     clear: left;
+   }
+   #tr2 {
+     width: 100px;
+     height: 100px;
+     background-color: yellow;
+     transition: 2s ease-in;
+   }
+   #tr2:hover {
+     width: 200px;
+     height: 200px;
+     background-color: #f50;
+     transform: rotate(270deg);
+   }
+   #anibox1 {
+     width: 100px;
+     height: 100px;
+     background-color: green;
+     border: 1px solid transparent;
+     animation-name: shape;
+     animation-duration: 3s;
+     margin: 20px;
+     float: left;
+     text-align: center;
+     font-size: 20px;
+     line-height: 100px;
+   }
+   #anibox2 {
+    width: 100px;
+     height: 100px;
+     background-color: purple;
+     border: 1px solid transparent;
+     animation-name: rotate;
+     animation-duration: 3s;
+     margin: 20px;
+     float: left;
+     text-align: center;
+     font-size: 20px;
+     line-height: 100px;
+   }
+   #anibox3 {
+     width: 100px;
+     height: 100px;
+     background-color: green;
+     border: 1px solid transparent;
+     animation-name: shape;
+     animation-duration: 3s;
+     margin: 20px;
+     float: left;
+     animation-direction: reverse;
+     text-align: center;
+     font-size: 20px;
+     line-height: 100px;
+   }
+   #anibox4 {
+    width: 100px;
+     height: 100px;
+     background-color: purple;
+     border: 1px solid transparent;
+     animation-name: rotate;
+     animation-duration: 3s;
+     margin: 20px;
+     float: left;
+     animation-direction: reverse;
+     text-align: center;
+     font-size: 20px;
+     line-height: 100px;
+   }
+   #anibox5 {
+     width: 100px;
+     height: 100px;
+     background-color: green;
+     border: 1px solid transparent;
+     animation-name: shape;
+     animation-duration: 3s;
+     margin: 20px;
+     float: left;
+     animation-direction: alternate;
+     text-align: center;
+     font-size: 20px;
+     line-height: 100px;
+     animation-iteration-count: infinite;
+   }
+   #anibox6 {
+    width: 100px;
+     height: 100px;
+     background-color: purple;
+     border: 1px solid transparent;
+     animation-name: rotate;
+     animation-duration: 3s;
+     margin: 20px;
+     float: left;
+     animation-direction: alternate-reverse;
+     text-align: center;
+     font-size: 20px;
+     line-height: 100px;
+     animation-iteration-count: infinite;
+   }
+   @keyframes shape {
+     from {border: 1px solid transparent;}
+     to {
+       border: 1px solid #000;
+       border-radius: 50%;
+    }
+   }
+   @keyframes rotate {
+     from {transform: rotate(0deg);}
+     to { transform: rotate(180deg);}
+   }
+   #anibox {
+     width: 120px;
+     height: 120px;
+     margin: 60px auto;
+     animation: rotate1 1.5s infinite, background 1.5s infinite alternate;
+   }
+   @keyframes rotate1 {
+     from {transform: perspective(120px) rotateX(0deg) rotateY(0deg);}
+     50% {transform: perspective(120px) rotateX(-180deg) rotateY(0deg);}
+     to {transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);}
+   }
+   @keyframes background {
+     from { background-color: red;}
+     50% {background-color: green;}
+     to {background-color: blue;}
+   }
+
   </style>
 </head>
 <body>
@@ -83,7 +272,7 @@
       <div id="scalexy"></div>
     </div>
   </div>
-  <h1>rotate()함수 / x값 / 원근감부여 / y값 / 원근감 부여</h1>
+  <h2>rotate()함수 [x값 / 원근감부여 / y값 / 원근감 부여]</h2>
   <div class="container">
     <div class="origin">
       <div id="rotatex">가</div>
@@ -97,6 +286,61 @@
     <div class="origin" id="per">
       <div id="rotatey">가</div>
     </div>
+  </div>
+  <h2>skew()함수</h2>
+  <div class="container">
+    <div class="origin">
+      <div id="skewX">가</div>
+    </div>
+    <div class="origin" id="per">
+      <div id="skewY">가</div>
+    </div>
+    <div class="origin">
+      <div id="skewxy">가</div>
+    </div>
+    <div id="h3div">
+      <h3 id="h3skew"> CSS 변형 함수 익히기</h3>
+    </div>
+  </div>
+  <hr>
+  <h1>transition</h1>
+  <p>스타일 속성을 바꾸는 것.</p>
+  <h2>transition : property & duration</h2>
+  <div class="container">
+    <div id="transpodu">
+      <h1>box</h1>
+    </div>
+  </div>
+  <h2>transition : duration & timing-function</h2>
+  <div id="box">
+    <div class="ease">ease</div>
+    <div class="linear">linear</div>
+    <div class="ease-in">ease-in</div>
+    <div class="ease-out">ease-out</div>
+    <div class="ease-in-out">ease-in-out</div>
+  </div>
+  <div class="clears"></div>
+  <h2>transition 속성 한번에 지정하기</h2>
+  <div>
+    <div id="tr2"></div>
+  </div>
+  <a href="Examples_11(1).html"><h2>Do it! 실습</h2></a>
+  <hr>
+  <h1>CSS 애니메이션</h1>
+  <div class="container">
+    <div id="anibox1">normal</div>
+    <div id="anibox2">normal</div>
+    <div id="anibox3">reverse</div>
+    <div id="anibox4">reverse</div>
+  </div>
+  <div class="clears"></div>
+  <div class="container">
+    <div id="anibox5">alternate</div>
+    <div id="anibox6">alternate-reverse</div>
+  </div>
+  <div class="clears"></div>
+  <div class="container">
+    <div id="anibox"></div>
   </div>
 </body>
 </html>
