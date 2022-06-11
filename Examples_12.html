@@ -5,8 +5,319 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .clears { clear: left;}
+    .container1 { 
+      width: 700px;
+      background-color: #eee;
+      border: 1px solid black;
+      margin-bottom: 30px;
+      display: flex;
+     }
+     .container2 { 
+      background-color: #eee;
+      border: 1px solid black;
+      margin-bottom: 30px;
+      display: flex;
+     }
+     .container3 {
+      height: 200px;
+      background-color: #eee;
+      border: 1px solid black;
+      margin-bottom: 30px;
+      display: flex;
+     }
+     .container4 {
+      height: 200px;
+      background-color: #eee;
+      border: 1px solid black;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+     }
+     .container5 {
+      float:left;
+      width:200px;
+      height:150px;
+      display:flex;          /* 플렉스 컨테이너 지정 */
+      flex-flow: row wrap;   /* 왼쪽에서 오른쪽, 여러 줄 표시 */
+      border:1px solid #222;
+      background-color:#eee;
+      margin:30px;
+     }
+     .divbox1 {
+      background-color: black;
+      color: white;
+      margin: 5px;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+    }
+    .divbox2 {
+      padding:5px 45px;
+      margin:5px;   
+	  	width:80px;
+      background-color:#222; 
+      color: white;
+    }
+    .divbox3 {
+      width:80px;
+      background-color:#222;   
+      border:1px dotted #e9e9e9;   
+      color: white;
+      text-align: center;
+    }
+    p {
+      color:#fff;
+      text-align: center;
+    }
+    #opt1 {flex-direction: row;}
+    #opt2 {flex-direction: row-reverse;}
+    #opt3 {flex-direction: column;}
+    #opt4 {flex-direction: column-reverse;}
+    #fw1 {flex-wrap: nowrap;}
+    #fw2 {flex-wrap: wrap;}
+    #fw3 {flex-wrap: wrap-reverse;}
+    #ff1 {flex-flow: row wrap;}
+    #ff2 {flex-flow: row nowrap;}
+    #jc1 {justify-content: flex-start;}
+    #jc2 {justify-content: flex-end;}
+    #jc3 {justify-content: center;}
+    #jc4 {justify-content: space-between;}
+    #jc5 {justify-content: space-around;}
+    #ai1 {align-items: flex-start;}
+    #ai2 {align-items: flex-end;}
+    #ai3 {align-items: center;}
+    #ai4 {align-items: baseline;}
+    #ai5 {align-items: stretch;}
+    #as1 {align-self: flex-start;}
+    #as2 {align-self: stretch;}
+    #ac1 {align-content: flex-start;}
+    #ac2 {align-content: flex-end;}
+    #ac3 {align-content: center;}
+    #ac4 {align-content: space-between;}
+    #ac5 {align-content: space-around;}
+    #ac6 {align-content: stretch;}
+  </style>
 </head>
 <body>
-  
+<h1>반응형 웹 알아보기</h1>
+<hr>
+<h1>미디어쿼리 알아보기</h1>
+<hr>
+<h1>그리드레이아웃 알아보기</h1>
+<h2>1. 플렉스 박스 레이아웃 알아보기</h2>
+<p>주축(수평) - 좌→우배치</p>
+<h3>1)플렉스 방향 지정</h3>
+<h4>flex-direction:row</h4>
+<div class="container1" id="opt1">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>flex-direction:row-reverse</h4>
+<div class="container1" id="opt2">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>flex-direction:column</h4>
+<div class="container1" id="opt3">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>flex-direction:column-reverse</h4>
+<div class="container1" id="opt4">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h3>2) 플렉스 항목 줄바꿈</h3>
+<h4>flex-wrap: nowrap</h4>
+<div class="container2" id="fw1">
+  <div class="divbox2">1</div>
+  <div class="divbox2">2</div>
+  <div class="divbox2">3</div>
+  <div class="divbox2">4</div>
+  <div class="divbox2">5</div>
+  <div class="divbox2">6</div>
+</div>
+<h4>flex-wrap: wrap</h4>
+<div class="container2" id="fw2">
+  <div class="divbox2">1</div>
+  <div class="divbox2">2</div>
+  <div class="divbox2">3</div>
+  <div class="divbox2">4</div>
+  <div class="divbox2">5</div>
+  <div class="divbox2">6</div>
+</div>
+<h4>flex-wrap: wrap-reverse</h4>
+<div class="container2" id="fw3">
+  <div class="divbox2">1</div>
+  <div class="divbox2">2</div>
+  <div class="divbox2">3</div>
+  <div class="divbox2">4</div>
+  <div class="divbox2">5</div>
+  <div class="divbox2">6</div>
+</div>
+<h3>3) 배치방향 + 줄바꿈 한번에 지정하기</h3>
+<h4>flex-flow: row wrap</h4>
+<div class="container2" id="ff1">
+  <div class="divbox2">1</div>
+  <div class="divbox2">2</div>
+  <div class="divbox2">3</div>
+  <div class="divbox2">4</div>
+  <div class="divbox2">5</div>
+  <div class="divbox2">6</div>
+</div>
+<h4>flex-flow: row nowrap</h4>
+<div class="container1" id="ff2">
+  <div class="divbox2">1</div>
+  <div class="divbox2">2</div>
+  <div class="divbox2">3</div>
+  <div class="divbox2">4</div>
+  <div class="divbox2">5</div>
+  <div class="divbox2">6</div>
+</div>
+<h3>주축 정렬 방법</h3>
+<h4>justify-content - flex-start</h4>
+<div class="container1" id="jc1">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>justify-content - flex-end</h4>
+<div class="container1" id="jc2">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>justify-content - center</h4>
+<div class="container1" id="jc3">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>justify-content - space-between</h4>
+<div class="container1" id="jc4">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>justify-content - around</h4>
+<div class="container1" id="jc5">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h3>교차축 정렬 방법</h3>
+<h4>align-items - flex-start</h4>
+<div class="container3" id="ai1">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>align-items - flex-end</h4>
+<div class="container3" id="ai2">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>align-items - center</h4>
+<div class="container3" id="ai3">
+  <div class="divbox1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox1">3</div>
+  <div class="divbox1">4</div>
+</div>
+<h4>align-items - baseline</h4>
+<div class="container3" id="ai4">
+  <div class="divbox2">1</div>
+  <div class="divbox2" style="font-size: 50px;">2</div>
+  <div class="divbox2" style="font-size: 30px;">3</div>
+  <div class="divbox2">4</div>
+</div>
+<h4>align-items - stretch</h4>
+<div class="container3" id="ai5">
+  <div class="divbox2"><p>1</p></div>
+  <div class="divbox2"><p>2</p></div>
+  <div class="divbox2"><p>3</p></div>
+  <div class="divbox2"><p>4</p></div>
+</div>
+<h3>특정 항목 정렬</h3>
+<h4>align-self</h4>
+<div class="container4" id="ai3">
+  <div class="divbox1" id="as1">1</div>
+  <div class="divbox1">2</div>
+  <div class="divbox2" id="as2">3</div>
+  <div class="divbox1">4</div>
+</div>
+<div class="clears"></div>
+<h3>여러 줄일때 교차축 정렬</h3>
+<h4>align-contents - flex-start</h4>
+<div class="container5" id="ac1">
+  <div class="divbox3">1</div>
+  <div class="divbox3">2</div>
+  <div class="divbox3">3</div>
+  <div class="divbox3">4</div>
+</div>
+<div class="clears"></div>
+<h4>align-contents - flex-end</h4>
+<div class="container5" id="ac2">
+  <div class="divbox3">1</div>
+  <div class="divbox3">2</div>
+  <div class="divbox3">3</div>
+  <div class="divbox3">4</div>
+</div>
+<div class="clears"></div>
+<h4>align-contents - center</h4>
+<div class="container5" id="ac3">
+  <div class="divbox3">1</div>
+  <div class="divbox3">2</div>
+  <div class="divbox3">3</div>
+  <div class="divbox3">4</div>
+</div>
+<div class="clears"></div>
+<h4>align-contents - space-between</h4>
+<div class="container5" id="ac4">
+  <div class="divbox3">1</div>
+  <div class="divbox3">2</div>
+  <div class="divbox3">3</div>
+  <div class="divbox3">4</div>
+</div>
+<div class="clears"></div>
+<h4>align-contents - space-around</h4>
+<div class="container5" id="ac5">
+  <div class="divbox3">1</div>
+  <div class="divbox3">2</div>
+  <div class="divbox3">3</div>
+  <div class="divbox3">4</div>
+</div>
+<div class="clears"></div>
+<h4>align-contents - stretch</h4>
+<div class="container5" id="ac6">
+  <div class="divbox3">1</div>
+  <div class="divbox3">2</div>
+  <div class="divbox3">3</div>
+  <div class="divbox3">4</div>
+</div>
+<div class="clears"></div>
+<h2>2. CSS 그리드 레이아웃 사용하기</h2>
+
+<p>테트리스</p>
+<hr>
 </body>
 </html>
