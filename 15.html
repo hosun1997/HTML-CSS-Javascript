@@ -5,8 +5,80 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .p5 {
+      padding-left: 5px;
+    }
+  </style>
 </head>
 <body>
-  
+  <h1>함수 선언하고 호출하기</h1>
+  <div>
+    <h2>함수 선언하기</h2>
+    <div style="border:1px solid black; width:200px;">
+      <div class="p5"><h3>function 함수명() {</div>
+      <div class="p5"><h3 style="padding-left:30px;">명령</h3></div>
+      <div class="p5"><h3>}</h3></div>
+    </div>
+    <h2>함수 호출하기</h2>
+    <div style="border:1px solid black; width:300px;">
+      <h3 class="p5">함수명() 또는 함수명(변수)</h3>
+    </div>
+  </div>
+  <h2>var, let, const로 선언한 변수 비교</h2>
+  <table border="1">
+    <tr>
+      <th>구분</th>
+      <th>var</th>
+      <th>let</th>
+      <th>const</th>
+    </tr>
+    <tr>
+      <th>스코프</th>
+      <td>함수 레벨</td>
+      <td>블록 레벨</td>
+      <td>블록 레벨</td>
+    </tr>
+    <tr>
+      <th>재할당</th>
+      <td>가능</td>
+      <td>가능</td>
+      <td>불가능</td>
+    </tr>
+    <tr>
+      <th>재선언</th>
+      <td>가능</td>
+      <td>불가능</td>
+      <td>불가능</td>
+    </tr>
+  </table>
+  <hr>
+  <h1>함수 표현식</h1>
+  <ul>
+    <li>
+      <p><b>익명 함수:</b>이름 없이 선언한 함수</p>
+      <div style="border:1px solid black; width:300px;">
+        <h3 class="p5">function(매개변수) { 명령 }</h3>
+      </div>
+    </li>
+    <li>
+      <p><b>즉시 실행 함수:</b>함수를 정의하는 것과 동시에 실행</p>
+      <div style="border:1px solid black; width:400px;">
+        <h3 class="p5">(function() { 명령 }());</h3>
+        <h3 class="p5">(function(매개변수) { 명령 } (인수));</h3>
+      </div>
+    </li>
+    <li>
+      <p><b>화살표 함수:</b>화살표 기호(=>) 왼쪽에는 매개변수를, 오른쪽에는 함수를 작성함. 익명 함수일 경우에만 사용할 수 있음.</p>
+      <div style="border:1px solid black; width:400px;">
+        <h3 class="p5">(매개변수) => { 함수 내용 }</h3>
+      </div>
+    </li>
+  </ul>
+  <hr>
+  <h1>이벤트와 이벤트 처리기</h1>
+  <p><b>이벤트:</b>키보드에서 키를 누르거나 브라우저가 웹 페이지를 불러오는 것처럼 웹 브라우저나 사용자가 행하는 동작</p>
+  <p><b>이벤트 처리기:</b>웹 문서에서 이벤트가 발생할 때 그 이벤트에 반응해서 실행하는 함수</p>
+  <hr>
 </body>
 </html>
