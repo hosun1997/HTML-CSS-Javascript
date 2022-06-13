@@ -6,7 +6,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  div {
+    background-color: #eee;
+    border: 1px solid black;
+    padding: 0px 10px;
+    display: inline-block;
+  }
+</style>
 <body>
-  
+  <h1>DOM 트리의 노드</h1>
+  <div>
+    <p><b>• 요소노드: </b>모든 HTML 태그를 의미합니다.</p>
+    <p><b>• 텍스트 노드: </b>태그의 텍스트 내용입니다.</p>
+    <p><b>• 속성노드: </b>태그의 속성입니다.</p>
+    <p><b>• 주석노드: </b>주석입니다.</p>
+  </div>
+  <hr>
+  <h1>DOM에 접근하기</h1>
+  <div>
+    <p><b>getElementById(id): </b>id명으로 접근합니다.</p>
+    <p><b>getElementsByClassName(class): </b> 클래스명으로 접근하며 여러 요소가 배열 형태로 저장됩니다.</p>
+    <p><b>getElementsByTagName(tag): </b>태그명으로 접근하며 여러 요소가 배열 형태로 저장됩니다.</p>
+    <p><b>querySelector(): </b>id명이나 선택자를 사용해 접근합니다.</p>
+    <p><b>querySelectorAll(): </b>클래스명이나 태그명의 선택자를 사용해 접근합니다. 여러 노드가 노드 리스트 형태로 저장됩니다.</p>
+  </div>
+  <p><b>• 속성 가져오기 및 수정하기</b></p>
+  <div>
+    <p><b>getAttribute(속성) </b>//태그에서 사용한 속성값을 가져옴</p>
+    <p><b>setAttribute(속성) </b>//태그의 속성을 특정한 값으로 지정함</p>
+  </div>
+  <p><b>• 이벤트 처리하기</b></p>
+  <div>
+    <p>요소<b>.addEventListener(이벤트, 함수, 캡처 여부)</b></p>
+  </div>
+  <p><b>• CSS 속성에 접근하기</b></p>
+  <div>
+    <p><b>document.</b>요소명<b>.style</b>속성명</p>
+  </div>
+  <hr>
+  <h1>텍스트 노드를 사용하는 새로운 요소 추가하기</h1>
+  <table border="1">
+    <tr>
+      <th>순서</th>
+      <th>메서드</th>
+      <th>설명</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>createElement()</td>
+      <td>새로운 요소 노드를 만듭니다.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>createTextNode()</td>
+      <td>새로운 텍스트 노드를 만듭니다.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>appendChild()</td>
+      <td>텍스트 노드를 요소 노드의 자식으로 연결합니다.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>appendChild()</td>
+      <td>요소 노드를 DOM에 연결합니다.</td>
+    </tr>
+  </table>
+  <hr>
+  <h1>속성값이 있는 새로운 요소 추가하기</h1>
+  <table border="1">
+    <tr>
+      <th>순서</th>
+      <th>메서드</th>
+      <th>설명</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>createElement()</td>
+      <td>새로운 요소 노드를 추가합니다.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>createAttribute()</td>
+      <td>새로운 속성 노드를 추가합니다.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>속성값 지정하기</td>
+      <td>속성값을 프로퍼티로 지정합니다.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>setAttributeNode()</td>
+      <td>속성 노드를 요소 노드의 자식으로 연결합니다.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>appendChild()</td>
+      <td>요소 노드를 DOM에 연결합니다.</td>
+    </tr>
+  </table>
+  <hr>
+  <h1>노드 삭제</h1>
+  <p>parentNode 프로퍼티로 부모 노드를 찾아서 부모 노드에서 삭제합니다.</p>
+  <div>
+    <p>부모노드<b>.removeChild(자식노드)</b></p>
+  </div>
+  <hr>
 </body>
 </html>

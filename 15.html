@@ -9,7 +9,31 @@
     .p5 {
       padding-left: 5px;
     }
-  </style>
+
+    .ul1 {
+      list-style: none;
+      width: 500px;
+      margin: 10px auto;
+      padding: 0;
+    }
+
+    .ul1 li {
+      display: inline-block;
+      width: 120px;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    #result {
+      width:500px;
+      height:300px;
+      margin:30px auto;
+      border:2px solid #ccc;
+      border-radius:15px;
+    }
+    </style>
 </head>
 <body>
   <h1>함수 선언하고 호출하기</h1>
@@ -79,6 +103,18 @@
   <h1>이벤트와 이벤트 처리기</h1>
   <p><b>이벤트:</b>키보드에서 키를 누르거나 브라우저가 웹 페이지를 불러오는 것처럼 웹 브라우저나 사용자가 행하는 동작</p>
   <p><b>이벤트 처리기:</b>웹 문서에서 이벤트가 발생할 때 그 이벤트에 반응해서 실행하는 함수</p>
+  <ul class="ul1">
+    <li><a href="#" onclick="changeBg('green')">Green</a></li>
+    <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+    <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+  </ul>
+  <div id="result"></div>
+  <script>
+    function changeBg(color) {
+      var result = document.querySelector('#result');
+      result.style.backgroundColor = color;
+    }
+  </script>
   <hr>
 </body>
 </html>
